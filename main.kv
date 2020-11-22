@@ -1,0 +1,47 @@
+#:kivy 2.0.0
+<Game>:
+	check: check
+	userimage: userimage
+	pcimage: pcimage
+
+	GridLayout:
+		cols: 1
+		size: root.width, root.height
+		GridLayout:
+			cols: 2
+
+			Label:
+				text: "Your choice"
+
+			Label:
+				text: "Pc choice"
+
+			Image:
+				id: userimage
+				source: ""
+
+			Image:
+				id: pcimage
+				source: ""
+
+		Label:
+			id: check
+			text: ""
+
+		BoxLayout:
+			orientation: "horizontal"
+			spacing: 10
+			padding: 40
+
+			Button:
+				text: "Rock"
+				on_press: root.rock()
+				
+
+			Button:
+				text: "Scissor"
+				on_press: root.scissor()
+
+			Button:
+				text: "Papper"
+				on_press: root.papper()
